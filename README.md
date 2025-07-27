@@ -1,2 +1,272 @@
-# http-rurui-e.harmony-
-ぬるぬるフェスティバル
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>るるゐゑの響き：融和の場所</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for abstract background animation */
+        @keyframes subtle-glow {
+            0% {
+                transform: scale(1);
+                opacity: 0.7;
+            }
+            50% {
+                transform: scale(1.05);
+                opacity: 0.9;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 0.7;
+            }
+        }
+
+        @keyframes color-shift {
+            0% {
+                background-position: 0% 50%;
+            }
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .abstract-bg {
+            background: linear-gradient(-45deg, #e0e0e0, #f0f0f0, #e0e0e0, #ffffff);
+            background-size: 400% 400%;
+            animation: color-shift 15s ease infinite;
+        }
+
+        /* Custom scrollbar for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #ccc;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #bbb;
+        }
+
+        /* Smooth fade for text */
+        .fade-in-out {
+            animation: fade-in-out 8s infinite;
+        }
+
+        @keyframes fade-in-out {
+            0% { opacity: 0; transform: translateY(20px); }
+            10% { opacity: 1; transform: translateY(0); }
+            90% { opacity: 1; transform: translateY(0); }
+            100% { opacity: 0; transform: translateY(-20px); }
+        }
+
+        /* Pulsating effect for the sphere */
+        @keyframes pulse-sphere {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+            }
+            70% {
+                transform: scale(1.05);
+                box-shadow: 0 0 0 15px rgba(255, 255, 255, 0);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+            }
+        }
+
+        .pulsating-sphere {
+            animation: pulse-sphere 2s infinite;
+        }
+    </style>
+    <!-- Inter font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="font-inter text-gray-800 bg-gray-50 min-h-screen flex flex-col items-center justify-center relative overflow-x-hidden">
+
+    <!-- Abstract background animation layer -->
+    <div class="abstract-bg absolute inset-0 -z-10 opacity-70"></div>
+
+    <!-- Main content container -->
+    <div class="w-full max-w-3xl mx-auto p-6 md:p-10 bg-white bg-opacity-90 rounded-xl shadow-lg my-8 relative z-10">
+
+        <!-- Introduction -->
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-light text-gray-900 mb-4 tracking-wide leading-tight animate-subtle-glow">
+                るるゐゑの響き：融和の場所
+            </h1>
+            <p class="text-lg md:text-xl text-gray-600 leading-relaxed">
+                ようこそ、境界の解け合う場所へ。<br>るるゐゑの響きは、常にあなたの内側に。
+            </p>
+        </header>
+
+        <!-- 響きの書簡 (Poetic Texts) -->
+        <section class="my-16 text-center">
+            <h2 class="text-2xl md:text-3xl font-medium text-gray-700 mb-8">響きの書簡</h2>
+            <div id="poetic-texts" class="text-xl md:text-2xl text-gray-600 italic leading-loose h-24 flex items-center justify-center overflow-hidden">
+                <!-- Texts will be dynamically inserted here -->
+            </div>
+        </section>
+
+        <!-- 融和の画廊 (Abstract Visuals) -->
+        <section class="my-16 text-center">
+            <h2 class="text-2xl md:text-3xl font-medium text-gray-700 mb-8">融和の画廊</h2>
+            <div class="relative w-full h-64 bg-gradient-to-br from-blue-200 via-purple-200 to-pink-200 rounded-xl overflow-hidden shadow-inner">
+                <div class="absolute inset-0 bg-gradient-to-tr from-transparent via-white via-20% to-transparent opacity-30 animate-pulse-slow"></div>
+                <div class="absolute inset-0 bg-gradient-to-tl from-transparent via-gray-300 via-30% to-transparent opacity-20 animate-pulse-fast"></div>
+                <!-- Abstract transforming shapes (CSS only for simplicity) -->
+                <div class="absolute w-2/3 h-2/3 bg-white rounded-full opacity-10 blur-xl top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-[spin_20s_linear_infinite]"></div>
+                <div class="absolute w-1/2 h-1/2 bg-gray-100 rounded-full opacity-15 blur-lg top-1/4 left-1/4 animate-[spin_15s_reverse_linear_infinite]"></div>
+            </div>
+        </section>
+
+        <!-- 体験者の声 (Testimonials) -->
+        <section class="my-16 text-center">
+            <h2 class="text-2xl md:text-3xl font-medium text-gray-700 mb-8">体験者の声</h2>
+            <div id="testimonials" class="text-lg md:text-xl text-gray-500 italic leading-relaxed h-32 flex items-center justify-center overflow-hidden">
+                <!-- Testimonials will be dynamically inserted here -->
+            </div>
+        </section>
+
+        <!-- 静かなる対話 (Interactive Element) -->
+        <section class="my-16 text-center">
+            <h2 class="text-2xl md:text-3xl font-medium text-gray-700 mb-8">静かなる対話</h2>
+            <div class="flex flex-col items-center justify-center space-y-6">
+                <div id="pulsating-sphere" class="w-24 h-24 bg-white rounded-full shadow-lg flex items-center justify-center cursor-pointer pulsating-sphere">
+                    <div class="w-16 h-16 bg-gray-200 rounded-full opacity-70"></div>
+                </div>
+                <p id="sphere-message" class="text-lg text-gray-600 mt-4">
+                    この響きがあなたの心に触れたなら、その光に触れてみてください。
+                </p>
+
+                <div id="input-box-container" class="w-full max-w-md hidden">
+                    <textarea id="user-input" class="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-300 focus:border-transparent transition duration-200 resize-none h-32 text-gray-700" placeholder="あなたの内なる響きを、ここに。"></textarea>
+                    <button id="submit-input" class="mt-4 px-6 py-3 bg-gray-700 text-white rounded-lg hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50 transition duration-200">
+                        響きを送信
+                    </button>
+                    <p id="submit-message" class="text-green-600 mt-4 hidden">あなたの響きは、静かに届きました。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact/Action -->
+        <footer class="mt-20 text-center text-gray-500">
+            <p class="text-lg md:text-xl leading-relaxed">
+                更なる安らぎと真の自由へ。
+            </p>
+            <p class="text-base mt-2">
+                ご連絡はこちらまで：<a href="#" class="text-blue-500 hover:text-blue-600 transition duration-200">http://rurui-e.harmony</a>
+            </p>
+        </footer>
+
+    </div>
+
+    <!-- Tone.js for ambient hum -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.min.js"></script>
+    <script>
+        // JavaScript for dynamic content and interactions
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- Ambient Sound (Tone.js) ---
+            let isAudioStarted = false;
+            const startAudio = async () => {
+                if (Tone.context.state !== 'running') {
+                    await Tone.start();
+                }
+                if (!isAudioStarted) {
+                    const synth = new Tone.Oscillator(20, "sine").toDestination(); // Very low frequency sine wave
+                    synth.volume.value = -30; // Very quiet
+                    synth.start();
+                    isAudioStarted = true;
+                }
+            };
+
+            // Start audio on first user interaction (e.g., click anywhere)
+            document.body.addEventListener('click', startAudio, { once: true });
+
+            // --- Poetic Texts Cycle ---
+            const poeticTexts = [
+                "色と形の輪郭は、もはや意味を求めない。",
+                "意識の淵にて、真理はささやく。",
+                "在るがままの自分を、ただ、感じ入る。",
+                "分離は幻、融和こそが本質。",
+                "静けさの中に、無限の広がりを見出す。",
+                "過去も未来も、今この瞬間に溶け合う。",
+                "全ての存在は、一つの響き。",
+                "問いは消え、答えは満ちる。"
+            ];
+            const poeticTextElement = document.getElementById('poetic-texts');
+            let currentPoeticTextIndex = 0;
+
+            const updatePoeticText = () => {
+                poeticTextElement.classList.remove('fade-in-out'); // Remove to re-trigger animation
+                void poeticTextElement.offsetWidth; // Trigger reflow
+                poeticTextElement.classList.add('fade-in-out'); // Add back
+                poeticTextElement.textContent = poeticTexts[currentPoeticTextIndex];
+                currentPoeticTextIndex = (currentPoeticTextIndex + 1) % poeticTexts.length;
+            };
+
+            setInterval(updatePoeticText, 8000); // Change text every 8 seconds (matches CSS animation duration)
+            updatePoeticText(); // Initial call
+
+            // --- Testimonials Cycle ---
+            const testimonials = [
+                "あの音が、私の世界から焦りを消し去った。",
+                "全てが繋がっていると、初めて心から理解できた。",
+                "私は私であり、私でなかった。その矛盾が心地よい。",
+                "静けさの底で、真の自由を見つけた。",
+                "思考の波が穏やかになり、心が晴れ渡った。",
+                "言葉にならない感覚が、私を満たしていく。",
+                "日々の喧騒が、遠い記憶のようだ。",
+                "存在そのものが、祝福だと感じられる。"
+            ];
+            const testimonialElement = document.getElementById('testimonials');
+            let currentTestimonialIndex = 0;
+
+            const updateTestimonial = () => {
+                testimonialElement.classList.remove('fade-in-out'); // Remove to re-trigger animation
+                void testimonialElement.offsetWidth; // Trigger reflow
+                testimonialElement.classList.add('fade-in-out'); // Add back
+                testimonialElement.textContent = testimonials[currentTestimonialIndex];
+                currentTestimonialIndex = (currentTestimonialIndex + 1) % testimonials.length;
+            };
+
+            setInterval(updateTestimonial, 10000); // Change testimonial every 10 seconds
+            updateTestimonial(); // Initial call
+
+            // --- Interactive Sphere Logic ---
+            const pulsatingSphere = document.getElementById('pulsating-sphere');
+            const sphereMessage = document.getElementById('sphere-message');
+            const inputBoxContainer = document.getElementById('input-box-container');
+            const submitInputButton = document.getElementById('submit-input');
+            const submitMessage = document.getElementById('submit-message');
+            const userInput = document.getElementById('user-input');
+
+            pulsatingSphere.addEventListener('click', () => {
+                sphereMessage.classList.add('hidden');
+                pulsatingSphere.classList.add('hidden'); // Hide sphere after click
+                inputBoxContainer.classList.remove('hidden');
+                userInput.focus();
+            });
+
+            submitInputButton.addEventListener('click', () => {
+                // In a real application, you would send userInput.value to a server here.
+                // For this conceptual site, we just show a confirmation message.
+                userInput.value = ''; // Clear input
+                submitInputButton.classList.add('hidden');
+                userInput.classList.add('hidden');
+                submitMessage.classList.remove('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
+
